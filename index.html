@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>    
+    <div class="sidebar">
+    <h1>Budget Tracker</h1>
+
+     <!-- Dropdown Navigation -->
+     <div class="dropdown">
+        <label for="section-select">Select a Section:</label>
+        <select id="section-select">
+            <option value="daily-budget">Daily Budgeting</option>
+            <option value="debt">Debt</option>
+            <option value="investments">Investments</option>
+            <option value="savings-accounts">Savings Accounts</option>
+            <option value="retirement-planning">Retirement Planning</option>
+            <option value="net-worth">Net Worth</option>
+        </select>
+    <button id="save-data">Save Data</button>
+
+    </div>
+    </div>
+    <div class="content">
+    <!-- Daily Budgeting Section -->
+    <div class="section" id="daily-budget">
+        <h2>Annual Budget</h2>
+        <form id="daily-budget-form">
+            <label for="income">Income:</label>
+            <input type="number" id="income" step="0.01">
+            <label for="expenses">Expenses:</label>
+            <input type="number" id="expenses" step="0.01">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="daily-budget-result">
+            <p>Balance: $<span id="daily-balance">0.00</span></p>
+        </div>
+    </div>
+
+    <!-- Debt Section -->
+    <div class="section" id="debt">
+        <h2>Debt</h2>
+        <div>
+            <label for="credit-card">Credit Card Balance:</label>
+            <input type="number" id="credit-card" step="0.01">
+        </div>
+        <div>
+            <label for="mortgage">Mortgage Balance:</label>
+            <input type="number" id="mortgage" step="0.01">
+        </div>
+        <div>
+            <label for="line-of-credit">Line of Credit Balance:</label>
+            <input type="number" id="line-of-credit" step="0.01">
+        </div>
+    </div>
+
+    <!-- Investment Section -->
+    <div class="section" id="investments">
+        <h2>Investments</h2>
+        <div>
+            <label for="rrsp">RRSP Balance:</label>
+            <input type="number" id="rrsp" step="0.01">
+        </div>
+        <div>
+            <label for="tfsa">TFSA Balance:</label>
+            <input type number="tfsa" step="0.01">
+        </div>
+        <div>
+            <label for="resp">RESP Balance:</label>
+            <input type="number" id="resp" step="0.01">
+        </div>
+    </div>
+
+    <!-- Savings Accounts Section -->
+    <div class="section" id="savings-accounts">
+        <h2>Savings Accounts</h2>
+        <div>
+            <label for="high-interest-savings">High-Interest Savings Account Balance:</label>
+            <input type="number" id="high-interest-savings" step="0.01">
+        </div>
+        <div>
+            <label for="chequing-account">Chequing Account Balance:</label>
+            <input type="number" id="chequing-account" step="0.01">
+        </div>
+        <div>
+            <label for="other-savings">Other Savings Account Balance:</label>
+            <input type="number" id="other-savings" step="0.01">
+        </div>
+    </div>
+
+    <!-- Retirement Planning Section -->
+    <div class="section" id="retirement-planning">
+        <h2>Retirement Planning</h2>
+        <label for="current-age">Current Age:</label>
+        <input type="number" id="current-age">
+        <label for="retirement-age">Retirement Age:</label>
+        <input type="number" id="retirement-age">
+        <label for="savings">Savings per Month:</label>
+        <input type="number" id="savings" step="0.01">
+        <button id="calculate-retirement">Calculate</button>
+        <p>Your Retirement Goal: $<span id="retirement-goal">0.00</span></p>
+    </div>
+    </div>
+
+    <!-- Net Worth Section -->
+    <div class="section" id="net-worth">
+        <h2>Net Worth</h2>
+        <p>Your Net Worth: $<span id="net-worth">0.00</span></p>
+        <p>Total Liabilities: $<span id="total-liabilities">0.00</span></p>
+        <p>Net Worth: $<span id="net-worth-value">0.00</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
